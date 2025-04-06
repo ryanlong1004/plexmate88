@@ -1,13 +1,12 @@
 [project]
-name = "bopa"
+name = "plexmate88"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "dotenv>=0.9.9",
     "paramiko>=3.5.1",
-    "plex-api-client>=0.25.0",
-    "plexapi>=4.16.1",
     "requests>=2.32.3",
     "scp>=0.15.0",
 ]

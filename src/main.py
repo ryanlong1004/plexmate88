@@ -92,19 +92,19 @@ def download_and_transfer_torrent(torrent, media_type):
     remote_path = f"/home/blitzcrank/watch/qbittorrent/{media_type}/{local_file}"
     logging.info("Transferring file %s to remote server.", local_file)
     remote_host = os.getenv("REMOTE_HOST")
-        remote_port = int(os.getenv("REMOTE_PORT", 22))
-        username = os.getenv("REMOTE_USERNAME")
-        password = os.getenv("REMOTE_PASSWORD")
-        remote_path_base = os.getenv("REMOTE_PATH_BASE")
+    remote_port = int(os.getenv("REMOTE_PORT", 22))
+    username = os.getenv("REMOTE_USERNAME")
+    password = os.getenv("REMOTE_PASSWORD")
+    remote_path_base = os.getenv("REMOTE_PATH_BASE")
 
-        scp_file_to_remote(
-            file_path=local_file,
-            remote_host=remote_host,
-            remote_port=remote_port,
-            username=username,
-            password=password,
-            remote_path=f"{remote_path_base}/{local_file}",
-        )
+    scp_file_to_remote(
+        file_path=local_file,
+        remote_host=remote_host,
+        remote_port=remote_port,
+        username=username,
+        password=password,
+        remote_path=f"{remote_path_base}/{local_file}",
+    )
     logging.info("File %s successfully transferred.", local_file)
 
 
