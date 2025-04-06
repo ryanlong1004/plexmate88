@@ -103,7 +103,7 @@ def download_and_transfer_torrent(torrent, media_type):
         remote_port=remote_port,
         username=username,
         password=password,
-        remote_path=f"{remote_path_base}/{local_file}",
+        remote_path=f"{local_file}",
     )
     logging.info("File %s successfully transferred.", local_file)
 
